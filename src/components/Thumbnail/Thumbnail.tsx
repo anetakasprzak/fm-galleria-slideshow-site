@@ -1,11 +1,13 @@
 import { mockPaintingsData } from "../../../data";
 import {
+  GridWrapper,
   ImgWrapper,
   ThumbnailImg,
-  PaintingName,
-  ArtistName,
-  PaintingTextBox,
+  // PaintingName,
+  // ArtistName,
+  // PaintingTextBox,
   ThumbnailWrapper,
+  ThumbnailsSectionBox,
 } from "./Thumbnail.styled";
 
 type Painting = {
@@ -29,28 +31,34 @@ type Painting = {
 
 function ThumbnailsBox() {
   return (
-    <div>
-      {mockPaintingsData.map((painting) => (
-        <Thumbnail key={painting.name} painting={painting} />
-      ))}
-    </div>
+    <GridWrapper>
+      <ThumbnailsSectionBox>
+        {mockPaintingsData.map((painting, idx) => (
+          <Thumbnail key={painting.name} painting={painting} idx={idx} />
+        ))}
+      </ThumbnailsSectionBox>
+    </GridWrapper>
   );
 }
 
 interface ThumbnailProps {
   painting: Painting;
+  idx: number;
 }
 
-function Thumbnail({ painting }: ThumbnailProps) {
+function Thumbnail({ painting, idx }: ThumbnailProps) {
   return (
-    <ThumbnailWrapper>
+    <ThumbnailWrapper
+      data-container={idx}
+      onClick={() => console.log(painting.name)}
+    >
       <ImgWrapper>
-        <ThumbnailImg src={painting.images.thumbnail} />
+        <ThumbnailImg src={painting.images.thumbnail} data-img={idx} />
       </ImgWrapper>
-      <PaintingTextBox>
+      {/* <PaintingTextBox>
         <PaintingName>{painting.name}</PaintingName>
         <ArtistName>{painting.artist.name}</ArtistName>
-      </PaintingTextBox>
+      </PaintingTextBox> */}
     </ThumbnailWrapper>
   );
 }

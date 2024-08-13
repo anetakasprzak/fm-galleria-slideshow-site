@@ -1,12 +1,16 @@
-import Slider from "./components/Slider";
-import { Heading } from "./HomePage.styled";
+import { mockPaintingsData } from "../data";
+import NavBar from "./components/NavBar";
 
 function App() {
-  console.log("hello");
   return (
     <div>
-      <Heading>Hi Hello</Heading>
-      <Slider />
+      <NavBar />
+      <div>
+        {mockPaintingsData.map((painting) => (
+          <img key={painting.name} src={painting.images.thumbnail} />
+        ))}
+      </div>
+      {/* <Slider /> */}
     </div>
   );
 }

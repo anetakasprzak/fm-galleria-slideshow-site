@@ -1,17 +1,13 @@
-import { mockPaintingsData } from "../data";
 import NavBar from "./components/NavBar";
+import ThumbnailsBox from "./components/Thumbnail";
+import { Wrapper } from "./HomePage.styled";
 
 function App() {
   return (
-    <div>
+    <Wrapper>
       <NavBar />
-      <div>
-        {mockPaintingsData.map((painting) => (
-          <img key={painting.name} src={painting.images.thumbnail} />
-        ))}
-      </div>
-      {/* <Slider /> */}
-    </div>
+      <ThumbnailsBox />
+    </Wrapper>
   );
 }
 

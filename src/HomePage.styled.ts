@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Heading = styled.h1`
-  color: yellow;
+export const Wrapper = styled.div`
+  background-color: violet;
 `;

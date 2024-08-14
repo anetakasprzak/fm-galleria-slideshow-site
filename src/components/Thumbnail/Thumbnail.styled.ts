@@ -8,9 +8,10 @@ export const GridWrapper = styled.div`
 export const ThumbnailsSectionBox = styled.section`
   padding: 4rem 3rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(min-content, auto));
-  grid-template-rows: repeat(5, minmax(min-content, auto));
+  grid-template-columns: repeat(4, 31rem);
+  grid-template-rows: repeat(12, 10rem);
   gap: 4rem;
+  height: 100vh;
 `;
 
 export const ThumbnailWrapper = styled.div`
@@ -19,77 +20,77 @@ export const ThumbnailWrapper = styled.div`
 
   &[data-container="0"] {
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
 
   &[data-container="1"] {
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 1/5;
   }
 
   &[data-container="2"] {
     grid-column: 3/4;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
 
   &[data-container="3"] {
     grid-column: 4/5;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
 
   &[data-container="4"] {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 3/6;
   }
 
   &[data-container="5"] {
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 5/7;
   }
 
   &[data-container="6"] {
     grid-column: 3/4;
-    grid-row: 2/3;
+    grid-row: 3/5;
   }
 
   &[data-container="7"] {
     grid-column: 4/5;
-    grid-row: 2/3;
+    grid-row: 3/6;
   }
 
   &[data-container="8"] {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 6/10;
   }
 
   &[data-container="9"] {
     grid-column: 2/3;
-    grid-row: 3/4;
+    grid-row: 7/10;
   }
 
   &[data-container="10"] {
     grid-column: 4/5;
-    grid-row: 3/4;
+    grid-row: 6/8;
   }
 
   &[data-container="11"] {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 10/13;
   }
 
   &[data-container="12"] {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 10/12;
   }
 
   &[data-container="13"] {
     grid-column: 3/4;
-    grid-row: 3/4;
+    grid-row: 7/12;
   }
 
   &[data-container="14"] {
     grid-column: 4/5;
-    grid-row: 4/5;
+    grid-row: 9/14;
   }
 `;
 
@@ -101,6 +102,7 @@ export const ThumbnailImg = styled.img`
   filter: brightness(75%);
   object-fit: cover;
   width: 100%;
+  height: 25rem;
 
   &[data-img="0"] {
     height: 25rem;
@@ -119,30 +121,57 @@ export const ThumbnailImg = styled.img`
   }
 
   &[data-img="4"] {
-    height: 34rem;
+    height: 36rem;
+    margin-top: 1.5rem;
   }
 
   &[data-img="5"] {
-    height: 28rem;
+    margin-top: -11.5rem;
+    height: 33rem;
   }
 
   &[data-img="6"] {
-    height: 50rem;
+    height: 54rem;
+    margin-top: 5rem;
   }
 
   &[data-img="7"] {
-    height: 25rem;
+    height: 34rem;
+    margin-top: 1rem;
   }
 
   &[data-img="8"] {
-    height: 42rem;
+    height: 48rem;
   }
 
   &[data-img="9"] {
-    height: 26rem;
+    height: 34rem;
+    margin-top: -2rem;
   }
 
   &[data-img="10"] {
+    height: 38rem;
+    margin-top: -3rem;
+  }
+
+  &[data-img="11"] {
+    height: 29.5rem;
+    margin-top: -4rem;
+  }
+
+  &[data-img="12"] {
+    height: 31.5rem;
+    margin-top: -6rem;
+  }
+
+  &[data-img="13"] {
+    margin-top: 7.4rem;
+    height: 60rem;
+  }
+
+  &[data-img="14"] {
+    height: 42.5rem;
+    margin-top: -3rem;
   }
 `;
 

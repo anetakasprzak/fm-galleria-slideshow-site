@@ -1,5 +1,3 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  /* background-color: violet; */
-`;
+export const Wrapper = styled.div``;

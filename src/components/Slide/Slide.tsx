@@ -1,3 +1,16 @@
+import {
+  AuthorBox,
+  AuthorTextBox,
+  PaintingImg,
+  SlideContainer,
+  TextBoxInfo,
+  TextInfo,
+  GoToSource,
+  BigDate,
+  PaintingName,
+  AuthorName,
+} from "./Slide.styled";
+
 const mockSlide = {
   name: "Starry Night",
   year: 1889,
@@ -20,9 +33,21 @@ const mockSlide = {
 
 function Slide() {
   return (
-    <div>
-      <h1>{mockSlide.name}</h1>
-    </div>
+    <SlideContainer>
+      <AuthorBox>
+        <PaintingImg src={mockSlide.images.hero.large} />
+        <AuthorTextBox>
+          <PaintingName>{mockSlide.name}</PaintingName>
+          <AuthorName>{mockSlide.artist.name}</AuthorName>
+        </AuthorTextBox>
+        <img src={mockSlide.artist.image} />
+      </AuthorBox>
+      <TextBoxInfo>
+        <BigDate>{mockSlide.year}</BigDate>
+        <TextInfo>{mockSlide.description}</TextInfo>
+        <GoToSource>Go to source</GoToSource>
+      </TextBoxInfo>
+    </SlideContainer>
   );
 }
 

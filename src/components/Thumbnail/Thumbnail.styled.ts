@@ -9,14 +9,13 @@ export const ThumbnailsSectionBox = styled.section`
   padding: 4rem 3rem;
   display: grid;
   grid-template-columns: repeat(4, 31rem);
-  grid-template-rows: repeat(12, 10rem);
+  grid-template-rows: repeat(11, 10rem);
   gap: 4rem;
   height: 100vh;
 `;
 
 export const ThumbnailWrapper = styled.div`
   display: inline-block;
-  position: relative;
 
   &[data-container="0"] {
     grid-column: 1/2;
@@ -96,10 +95,11 @@ export const ThumbnailWrapper = styled.div`
 
 export const ImgWrapper = styled.div`
   max-width: 31rem;
+  position: relative;
 `;
 
 export const ThumbnailImg = styled.img`
-  filter: brightness(75%);
+  filter: brightness(70%);
   object-fit: cover;
   width: 100%;
   height: 25rem;
@@ -175,22 +175,22 @@ export const ThumbnailImg = styled.img`
   }
 `;
 
-// export const PaintingTextBox = styled.div`
-//   position: absolute;
-//   bottom: 3.2rem;
-//   left: 3.2rem;
-//   color: #fff;
-//   line-height: normal;
-// `;
+export const PaintingTextBox = styled.div`
+  position: absolute;
+  bottom: 3.2rem;
+  left: 3.2rem;
+  color: #fff;
+  line-height: normal;
+`;
 
-// export const PaintingName = styled.p`
-//   font-size: 2.4rem;
-//   font-weight: 700;
-//   max-width: 80%;
-//   margin-bottom: 0.6rem;
-// `;
+export const PaintingName = styled.p`
+  font-size: 2.4rem;
+  font-weight: 700;
+  max-width: 80%;
+  margin-bottom: 0.6rem;
+`;
 
-// export const ArtistName = styled.p`
-//   font-size: 1.3rem;
-//   opacity: 0.7528;
-// `;
+export const ArtistName = styled.p`
+  font-size: 1.3rem;
+  opacity: 0.7528;
+`;

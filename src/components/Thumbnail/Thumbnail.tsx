@@ -1,7 +1,10 @@
 import { mockPaintingsData } from "../../../data";
 import {
+  ArtistName,
   GridWrapper,
   ImgWrapper,
+  PaintingName,
+  PaintingTextBox,
   ThumbnailImg,
   // PaintingName,
   // ArtistName,
@@ -54,11 +57,11 @@ function Thumbnail({ painting, idx }: ThumbnailProps) {
     >
       <ImgWrapper>
         <ThumbnailImg src={painting.images.thumbnail} data-img={idx} />
+        <PaintingTextBox>
+          <PaintingName>{painting.name}</PaintingName>
+          <ArtistName>{painting.artist.name}</ArtistName>
+        </PaintingTextBox>
       </ImgWrapper>
-      {/* <PaintingTextBox>
-        <PaintingName>{painting.name}</PaintingName>
-        <ArtistName>{painting.artist.name}</ArtistName>
-      </PaintingTextBox> */}
     </ThumbnailWrapper>
   );
 }

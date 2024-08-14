@@ -6,7 +6,6 @@ export const GridWrapper = styled.div`
 `;
 
 export const ThumbnailsSectionBox = styled.section`
-  padding: 4rem 3rem;
   display: grid;
   grid-template-columns: repeat(4, 31rem);
   grid-template-rows: repeat(11, 10rem);
@@ -96,6 +95,7 @@ export const ThumbnailWrapper = styled.div`
 export const ImgWrapper = styled.div`
   max-width: 31rem;
   position: relative;
+  cursor: pointer;
 `;
 
 export const ThumbnailImg = styled.img`

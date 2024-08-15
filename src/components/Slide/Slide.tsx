@@ -11,6 +11,9 @@ import {
   AuthorName,
   AuthorPortrait,
   NamesBox,
+  ViewImgBtn,
+  BtnIcon,
+  BtnText,
 } from "./Slide.styled";
 
 const mockSlide = {
@@ -38,6 +41,10 @@ function Slide() {
     <SlideContainer>
       <AuthorBox>
         <PaintingImg src={mockSlide.images.hero.large} />
+        <ViewImgBtn>
+          <BtnIcon src="../../../public/icon-view-image.svg" />
+          <BtnText>View image</BtnText>
+        </ViewImgBtn>
         <PaintingAuthorName>
           <NamesBox>
             <PaintingName>{mockSlide.name}</PaintingName>

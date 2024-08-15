@@ -10,11 +10,43 @@ export const SlideContainer = styled.div`
 
 export const AuthorBox = styled.div`
   display: flex;
+  position: relative;
 `;
 
 export const PaintingImg = styled.img`
   width: 47.5rem;
 `;
+
+export const ViewImgBtn = styled.button`
+  position: absolute;
+  bottom: 1.6rem;
+  left: 1.6rem;
+  font-family: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  padding: 1.4rem 1.6rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2.143px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+`;
+
+export const BtnIcon = styled.img``;
+
+export const BtnText = styled.p``;
 
 export const PaintingAuthorName = styled.div`
   display: flex;

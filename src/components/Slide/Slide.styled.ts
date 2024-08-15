@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SlideContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 12rem;
 `;
 
 export const AuthorBox = styled.div`
@@ -19,13 +20,34 @@ export const PaintingAuthorName = styled.div`
   justify-content: space-between;
 `;
 
-export const NamesBox = styled.div``;
+export const NamesBox = styled.div`
+  padding-left: 6.5rem;
+  background-color: #fff;
+  height: 23.8rem;
+  margin-left: -6.5rem;
+  margin-top: -1rem;
+  padding-top: 1rem;
+`;
 
-export const PaintingName = styled.h1``;
+export const PaintingName = styled.h1`
+  color: #000;
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 6.4rem;
+  max-width: 36rem;
+  margin-bottom: 2.4rem;
+`;
 
-export const AuthorName = styled.p``;
+export const AuthorName = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+`;
 
-export const AuthorPortrait = styled.img``;
+export const AuthorPortrait = styled.img`
+  width: 12.8rem;
+  margin-left: 3rem;
+  margin-bottom: -6rem;
+`;
 
 export const TextBoxInfo = styled.div`
   display: flex;

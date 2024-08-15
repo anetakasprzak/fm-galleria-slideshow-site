@@ -6,6 +6,8 @@ import {
   ButtonsBox,
   PaintingName,
   AuthorName,
+  IconBack,
+  IconNext,
 } from "./Slider.styled";
 
 const mockSlide = {
@@ -45,8 +47,8 @@ function SliderComponent() {
         <AuthorName>{mockSlide.artist.name}</AuthorName>
       </TextBox>
       <ButtonsBox>
-        <img src="../../../public/icon-back-button.svg" />
-        <img src="../../../public/icon-next-button.svg" />
+        <IconBack src="/icon-back-button.svg" />
+        <IconNext src="/icon-next-button.svg" />
       </ButtonsBox>
     </SliderWrapper>
   );

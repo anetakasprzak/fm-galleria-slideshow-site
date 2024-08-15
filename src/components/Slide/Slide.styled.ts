@@ -55,12 +55,11 @@ export const PaintingAuthorName = styled.div`
 `;
 
 export const NamesBox = styled.div`
-  padding-left: 6.5rem;
+  padding: 1rem 0 6rem 6.5rem;
   background-color: #fff;
-  height: 23.8rem;
+  height: auto;
   margin-left: -6.5rem;
   margin-top: -1rem;
-  padding-top: 1rem;
 `;
 
 export const PaintingName = styled.h1`
@@ -68,7 +67,7 @@ export const PaintingName = styled.h1`
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 6.4rem;
-  max-width: 36rem;
+  max-width: 30rem;
   margin-bottom: 2.4rem;
 `;
 

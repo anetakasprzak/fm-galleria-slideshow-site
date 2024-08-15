@@ -5,25 +5,44 @@ import { useState } from "react";
 import Slider from "./components/Slider";
 import { mockPaintingsData } from "../data";
 
+export type Painting = {
+  id: number;
+  name: string;
+  year: number;
+  description: string;
+  source: string;
+  artist: {
+    image: string;
+    name: string;
+  };
+  images: {
+    thumbnail: string;
+    hero: {
+      small: string;
+      large: string;
+    };
+    gallery: string;
+  };
+};
+
 function App() {
-  const [currentActiveSlideId, setCurrentActiveSlideId] = useState<
+  const [currentActivePaintingId, setCurrentActivePaintingId] = useState<
     number | null
   >(null);
 
-  const activeSlide = mockPaintingsData.find(
-    (painting) => painting.id === currentActiveSlideId
+  const activePainting = mockPaintingsData.find(
+    (painting) => painting.id === currentActivePaintingId
   );
 
-  console.log(activeSlide);
-
-  console.log(currentActiveSlideId);
   return (
     <Wrapper>
       <NavBar />
-      {!activeSlide && (
-        <ThumbnailsBox setCurrentActiveSlideId={setCurrentActiveSlideId} />
+      {!activePainting && (
+        <ThumbnailsBox
+          setCurrentActivePaintingId={setCurrentActivePaintingId}
+        />
       )}
-      {activeSlide && <Slider activeSlide={activeSlide} />}
+      {activePainting && <Slider activePainting={activePainting} />}
     </Wrapper>
   );
 }

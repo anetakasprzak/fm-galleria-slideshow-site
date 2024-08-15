@@ -1,4 +1,5 @@
 import { mockPaintingsData } from "../../../data";
+import { Painting } from "../../App";
 import {
   ArtistName,
   GridWrapper,
@@ -13,31 +14,13 @@ import {
   ThumbnailsSectionBox,
 } from "./Thumbnail.styled";
 
-type Painting = {
-  id: number;
-  name: string;
-  year: number;
-  description: string;
-  source: string;
-  artist: {
-    image: string;
-    name: string;
-  };
-  images: {
-    thumbnail: string;
-    hero: {
-      small: string;
-      large: string;
-    };
-    gallery: string;
-  };
-};
-
 interface ThumbnailsBoxProps {
-  setCurrentActiveSlideId: React.Dispatch<React.SetStateAction<number | null>>;
+  setCurrentActivePaintingId: React.Dispatch<
+    React.SetStateAction<number | null>
+  >;
 }
 
-function ThumbnailsBox({ setCurrentActiveSlideId }: ThumbnailsBoxProps) {
+function ThumbnailsBox({ setCurrentActivePaintingId }: ThumbnailsBoxProps) {
   return (
     <GridWrapper>
       <ThumbnailsSectionBox>
@@ -46,7 +29,7 @@ function ThumbnailsBox({ setCurrentActiveSlideId }: ThumbnailsBoxProps) {
             key={painting.name}
             painting={painting}
             idx={idx}
-            setCurrentActiveSlideId={setCurrentActiveSlideId}
+            setCurrentActivePaintingId={setCurrentActivePaintingId}
           />
         ))}
       </ThumbnailsSectionBox>
@@ -57,14 +40,20 @@ function ThumbnailsBox({ setCurrentActiveSlideId }: ThumbnailsBoxProps) {
 interface ThumbnailProps {
   painting: Painting;
   idx: number;
-  setCurrentActiveSlideId: React.Dispatch<React.SetStateAction<number | null>>;
+  setCurrentActivePaintingId: React.Dispatch<
+    React.SetStateAction<number | null>
+  >;
 }
 
-function Thumbnail({ painting, idx, setCurrentActiveSlideId }: ThumbnailProps) {
+function Thumbnail({
+  painting,
+  idx,
+  setCurrentActivePaintingId,
+}: ThumbnailProps) {
   return (
     <ThumbnailWrapper
       data-container={idx}
-      onClick={() => setCurrentActiveSlideId(painting.id)}
+      onClick={() => setCurrentActivePaintingId(painting.id)}
     >
       <ImgWrapper>
         <ThumbnailImg src={painting.images.thumbnail} data-img={idx} />

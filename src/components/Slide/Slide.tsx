@@ -1,3 +1,4 @@
+import { Painting } from "../../App";
 import {
   AuthorBox,
   PaintingAuthorName,
@@ -16,26 +17,30 @@ import {
   BtnText,
 } from "./Slide.styled";
 
-function Slide({ activeSlide }) {
+interface SlideProps {
+  activePainting: Painting;
+}
+
+function Slide({ activePainting }: SlideProps) {
   return (
     <SlideContainer>
       <AuthorBox>
-        <PaintingImg src={activeSlide.images.hero.large} />
+        <PaintingImg src={activePainting.images.hero.large} />
         <ViewImgBtn>
           <BtnIcon src="../../../public/icon-view-image.svg" />
           <BtnText>View image</BtnText>
         </ViewImgBtn>
         <PaintingAuthorName>
           <NamesBox>
-            <PaintingName>{activeSlide.name}</PaintingName>
-            <AuthorName>{activeSlide.artist.name}</AuthorName>
+            <PaintingName>{activePainting.name}</PaintingName>
+            <AuthorName>{activePainting.artist.name}</AuthorName>
           </NamesBox>
-          <AuthorPortrait src={activeSlide.artist.image} />
+          <AuthorPortrait src={activePainting.artist.image} />
         </PaintingAuthorName>
       </AuthorBox>
       <TextBoxInfo>
-        <BigDate>{activeSlide.year}</BigDate>
-        <TextInfo>{activeSlide.description}</TextInfo>
+        <BigDate>{activePainting.year}</BigDate>
+        <TextInfo>{activePainting.description}</TextInfo>
         <GoToSource>Go to source</GoToSource>
       </TextBoxInfo>
     </SlideContainer>

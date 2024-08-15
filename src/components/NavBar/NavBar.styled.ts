@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const NavContainer = styled.div`
+  padding: 0rem 4rem;
   padding-bottom: 4rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #e5e5e5;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const SlideshowBtn = styled.button`

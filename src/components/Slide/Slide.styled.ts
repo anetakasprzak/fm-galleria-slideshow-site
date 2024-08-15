@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const SlideContainer = styled.div`
+  padding: 0rem 4rem;
   display: flex;
   justify-content: space-between;
   padding-bottom: 12rem;
+  border-bottom: 1px solid #e5e5e5;
 `;
 
 export const AuthorBox = styled.div`

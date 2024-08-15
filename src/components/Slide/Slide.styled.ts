@@ -52,4 +52,17 @@ export const TextInfo = styled.p`
   top: 11.5rem;
 `;
 
-export const GoToSource = styled.a``;
+export const GoToSource = styled.a`
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.929px;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+`;

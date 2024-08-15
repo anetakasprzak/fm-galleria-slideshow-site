@@ -1,21 +1,55 @@
 import styled from "styled-components";
 
-export const SlideContainer = styled.div``;
+export const SlideContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
-export const AuthorBox = styled.div``;
+export const AuthorBox = styled.div`
+  display: flex;
+`;
 
-export const PaintingImg = styled.img``;
+export const PaintingImg = styled.img`
+  width: 47.5rem;
+`;
 
-export const AuthorTextBox = styled.div``;
+export const PaintingAuthorName = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const NamesBox = styled.div``;
 
 export const PaintingName = styled.h1``;
 
 export const AuthorName = styled.p``;
 
-export const TextBoxInfo = styled.div``;
+export const AuthorPortrait = styled.img``;
 
-export const BigDate = styled.span``;
+export const TextBoxInfo = styled.div`
+  display: flex;
 
-export const TextInfo = styled.p``;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const BigDate = styled.span`
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: 15rem;
+  color: #f3f3f3;
+`;
+
+export const TextInfo = styled.p`
+  width: 35rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+
+  position: absolute;
+  top: 11.5rem;
+`;
 
 export const GoToSource = styled.a``;

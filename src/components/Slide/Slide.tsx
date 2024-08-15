@@ -1,6 +1,6 @@
 import {
   AuthorBox,
-  AuthorTextBox,
+  PaintingAuthorName,
   PaintingImg,
   SlideContainer,
   TextBoxInfo,
@@ -9,6 +9,8 @@ import {
   BigDate,
   PaintingName,
   AuthorName,
+  AuthorPortrait,
+  NamesBox,
 } from "./Slide.styled";
 
 const mockSlide = {
@@ -36,11 +38,13 @@ function Slide() {
     <SlideContainer>
       <AuthorBox>
         <PaintingImg src={mockSlide.images.hero.large} />
-        <AuthorTextBox>
-          <PaintingName>{mockSlide.name}</PaintingName>
-          <AuthorName>{mockSlide.artist.name}</AuthorName>
-        </AuthorTextBox>
-        <img src={mockSlide.artist.image} />
+        <PaintingAuthorName>
+          <NamesBox>
+            <PaintingName>{mockSlide.name}</PaintingName>
+            <AuthorName>{mockSlide.artist.name}</AuthorName>
+          </NamesBox>
+          <AuthorPortrait src={mockSlide.artist.image} />
+        </PaintingAuthorName>
       </AuthorBox>
       <TextBoxInfo>
         <BigDate>{mockSlide.year}</BigDate>

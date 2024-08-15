@@ -14,6 +14,7 @@ import {
 } from "./Thumbnail.styled";
 
 type Painting = {
+  id: number;
   name: string;
   year: number;
   description: string;
@@ -32,12 +33,21 @@ type Painting = {
   };
 };
 
-function ThumbnailsBox() {
+interface ThumbnailsBoxProps {
+  setCurrentActiveSlideId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+function ThumbnailsBox({ setCurrentActiveSlideId }: ThumbnailsBoxProps) {
   return (
     <GridWrapper>
       <ThumbnailsSectionBox>
         {mockPaintingsData.map((painting, idx) => (
-          <Thumbnail key={painting.name} painting={painting} idx={idx} />
+          <Thumbnail
+            key={painting.name}
+            painting={painting}
+            idx={idx}
+            setCurrentActiveSlideId={setCurrentActiveSlideId}
+          />
         ))}
       </ThumbnailsSectionBox>
     </GridWrapper>
@@ -47,13 +57,14 @@ function ThumbnailsBox() {
 interface ThumbnailProps {
   painting: Painting;
   idx: number;
+  setCurrentActiveSlideId: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
-function Thumbnail({ painting, idx }: ThumbnailProps) {
+function Thumbnail({ painting, idx, setCurrentActiveSlideId }: ThumbnailProps) {
   return (
     <ThumbnailWrapper
       data-container={idx}
-      onClick={() => console.log(painting.name)}
+      onClick={() => setCurrentActiveSlideId(painting.id)}
     >
       <ImgWrapper>
         <ThumbnailImg src={painting.images.thumbnail} data-img={idx} />

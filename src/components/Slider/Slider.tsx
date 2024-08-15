@@ -30,10 +30,10 @@ const mockSlide = {
   },
 };
 
-function Slider() {
+function Slider({ activeSlide }) {
   return (
     <Container>
-      <Slide />
+      <Slide activeSlide={activeSlide} />
       <SliderComponent />
     </Container>
   );

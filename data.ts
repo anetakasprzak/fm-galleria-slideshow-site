@@ -1,5 +1,6 @@
 export const mockPaintingsData = [
   {
+    id: 1,
     name: "Starry Night",
     year: 1889,
     description:
@@ -19,6 +20,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 2,
     name: "Girl with a Pearl Earring",
     year: 1665,
     description:
@@ -38,6 +40,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 3,
     name: "Guernica",
     year: 1937,
     description:
@@ -57,6 +60,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 4,
     name: "Penitent Magdalene",
     year: 1625,
     description:
@@ -77,6 +81,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 5,
     name: "The Storm on the Sea of Galilee",
     year: 1633,
     description:
@@ -96,6 +101,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 6,
     name: "The Great Wave off Kanagawa",
     year: 1831,
     description:
@@ -115,6 +121,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 7,
     name: "Van Gogh Self-portrait",
     year: 1889,
     description:
@@ -134,6 +141,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 8,
     name: "The Sleeping Gypsy",
     year: 1897,
     description:
@@ -153,6 +161,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 9,
     name: "Lady with an Ermine",
     year: 1489,
     description:
@@ -172,6 +181,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 10,
     name: "The Night Café",
     year: 1888,
     description:
@@ -191,6 +201,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 11,
     name: "The Basket of Apples",
     year: 1893,
     description:
@@ -210,6 +221,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 12,
     name: "The Boy in the Red Vest",
     year: 1889,
     description:
@@ -229,6 +241,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 13,
     name: "Arnolfini Portrait",
     year: 1434,
     description:
@@ -248,6 +261,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 14,
     name: "Mona Lisa",
     year: 1503,
     description:
@@ -267,6 +281,7 @@ export const mockPaintingsData = [
     },
   },
   {
+    id: 15,
     name: "The Swing",
     year: 1767,
     description:

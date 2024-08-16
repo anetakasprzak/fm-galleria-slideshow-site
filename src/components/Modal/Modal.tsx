@@ -8,8 +8,8 @@ interface ModalProps {
 function Modal({ activePainting }: ModalProps) {
   return (
     <Overlay>
-      <CloseBtn>Close</CloseBtn>
       <ModalContent>
+        <CloseBtn>Close</CloseBtn>
         <img src={activePainting.images.gallery} alt="image" />
       </ModalContent>
     </Overlay>

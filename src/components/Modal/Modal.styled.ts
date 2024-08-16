@@ -11,7 +11,23 @@ export const Overlay = styled.div`
   z-index: 5;
 `;
 
-export const CloseBtn = styled.button``;
+export const CloseBtn = styled.button`
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.25;
+  }
+`;
 
 export const ModalContent = styled.div`
   position: absolute;
@@ -19,4 +35,9 @@ export const ModalContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
 `;

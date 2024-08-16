@@ -24,7 +24,7 @@ interface SlideProps {
 }
 
 function Slide({ activePainting }: SlideProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>

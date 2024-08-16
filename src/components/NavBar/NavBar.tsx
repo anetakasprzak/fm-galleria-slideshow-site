@@ -1,10 +1,17 @@
 import { NavContainer, SlideshowBtn } from "./NavBar.styled";
+import { Painting } from "../../App";
 
-function NavBar() {
+interface NavBarProps {
+  activePainting: Painting;
+}
+
+function NavBar({ activePainting }: NavBarProps) {
   return (
     <NavContainer>
       <img src="/public/logo.svg" />
-      <SlideshowBtn>Start slideshow</SlideshowBtn>
+      <SlideshowBtn>
+        {!activePainting ? "Start slideshow" : "Stop slideshow"}
+      </SlideshowBtn>
     </NavContainer>
   );
 }

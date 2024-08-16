@@ -9,7 +9,7 @@ function Modal({ activePainting }: ModalProps) {
   return (
     <Overlay>
       <ModalContent>
-        <CloseBtn>Close</CloseBtn>
+        <CloseBtn onClick={() => activePainting(null)}>Close</CloseBtn>
         <img src={activePainting.images.gallery} alt="image" />
       </ModalContent>
     </Overlay>

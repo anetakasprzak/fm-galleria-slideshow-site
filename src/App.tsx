@@ -36,7 +36,10 @@ function App() {
 
   return (
     <Wrapper>
-      <NavBar activePainting={activePainting} />
+      <NavBar
+        activePainting={activePainting}
+        setCurrentActivePaintingId={setCurrentActivePaintingId}
+      />
       {!activePainting && (
         <ThumbnailsBox
           setCurrentActivePaintingId={setCurrentActivePaintingId}

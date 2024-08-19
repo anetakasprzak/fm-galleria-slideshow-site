@@ -1,14 +1,20 @@
-import { NavContainer, SlideshowBtn } from "./NavBar.styled";
+import { NavContainer, SlideshowBtn, LogoImg } from "./NavBar.styled";
 import { Painting } from "../../App";
 
 interface NavBarProps {
-  activePainting: Painting;
+  activePainting?: Painting;
+  setCurrentActivePaintingId: React.Dispatch<
+    React.SetStateAction<number | null>
+  >;
 }
 
-function NavBar({ activePainting }: NavBarProps) {
+function NavBar({ activePainting, setCurrentActivePaintingId }: NavBarProps) {
   return (
     <NavContainer>
-      <img src="/public/logo.svg" />
+      <LogoImg
+        src="/public/logo.svg"
+        onClick={() => setCurrentActivePaintingId(null)}
+      />
       <SlideshowBtn>
         {!activePainting ? "Start slideshow" : "Stop slideshow"}
       </SlideshowBtn>

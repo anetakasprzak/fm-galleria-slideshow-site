@@ -11,6 +11,10 @@ export const NavContainer = styled.div`
   justify-content: space-between;
 `;
 
+export const LogoImg = styled.img`
+  cursor: pointer;
+`;
+
 export const SlideshowBtn = styled.button`
   font-family: inherit;
   border: none;

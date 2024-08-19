@@ -2,10 +2,35 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
+export const ProgressBarContainer = styled.div`
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 1px;
+  z-index: 6;
+  position: relative;
+`;
+
+export const Bar = styled.div`
+  background-color: #000;
+  height: 1px;
+  width: 50%;
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
 export const SliderWrapper = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+`;
+
+export const Details = styled.div`
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 2.5rem 4rem 0 4rem;
 `;
 

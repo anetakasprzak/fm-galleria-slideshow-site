@@ -9,6 +9,9 @@ import {
   AuthorName,
   IconBack,
   IconNext,
+  ProgressBarContainer,
+  Details,
+  Bar,
 } from "./Slider.styled";
 
 interface SliderProps {
@@ -31,14 +34,19 @@ interface SliderComponentProps {
 function SliderComponent({ activePainting }: SliderComponentProps) {
   return (
     <SliderWrapper>
-      <TextBox>
-        <PaintingName>{activePainting.name}</PaintingName>
-        <AuthorName>{activePainting.artist.name}</AuthorName>
-      </TextBox>
-      <ButtonsBox>
-        <IconBack src="/icon-back-button.svg" />
-        <IconNext src="/icon-next-button.svg" />
-      </ButtonsBox>
+      <ProgressBarContainer>
+        <Bar />
+      </ProgressBarContainer>
+      <Details>
+        <TextBox>
+          <PaintingName>{activePainting.name}</PaintingName>
+          <AuthorName>{activePainting.artist.name}</AuthorName>
+        </TextBox>
+        <ButtonsBox>
+          <IconBack src="/icon-back-button.svg" />
+          <IconNext src="/icon-next-button.svg" />
+        </ButtonsBox>
+      </Details>
     </SliderWrapper>
   );
 }

@@ -5,7 +5,7 @@ export const SlideContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 12rem;
-  border-bottom: 1px solid #e5e5e5;
+  /* border-bottom: 1px solid #e5e5e5; */
 `;
 
 export const AuthorBox = styled.div`

@@ -3,13 +3,14 @@ import { CloseBtn, Overlay, ModalContent } from "./Modal.styled";
 
 interface ModalProps {
   activePainting: Painting;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Modal({ activePainting }: ModalProps) {
+function Modal({ activePainting, setIsOpen }: ModalProps) {
   return (
     <Overlay>
       <ModalContent>
-        <CloseBtn onClick={() => activePainting(null)}>Close</CloseBtn>
+        <CloseBtn onClick={() => setIsOpen(false)}>Close</CloseBtn>
         <img src={activePainting.images.gallery} alt="image" />
       </ModalContent>
     </Overlay>

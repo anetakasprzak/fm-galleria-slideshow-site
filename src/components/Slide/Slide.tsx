@@ -49,7 +49,9 @@ function Slide({ activePainting }: SlideProps) {
           <GoToSource>Go to source</GoToSource>
         </TextBoxInfo>
       </SlideContainer>
-      {isOpen && <Modal activePainting={activePainting} />}
+      {isOpen && (
+        <Modal activePainting={activePainting} setIsOpen={setIsOpen} />
+      )}
     </>
   );
 }

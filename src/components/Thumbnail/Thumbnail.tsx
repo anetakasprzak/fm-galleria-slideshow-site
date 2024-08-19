@@ -62,6 +62,7 @@ function Thumbnail({
           <ArtistName>{painting.artist.name}</ArtistName>
         </PaintingTextBox>
       </ImgWrapper>
+      <p>{painting.id - 1}</p>
     </ThumbnailWrapper>
   );
 }

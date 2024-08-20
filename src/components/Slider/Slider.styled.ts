@@ -32,6 +32,10 @@ export const Details = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 2.5rem 4rem 0 4rem;
+
+  @media screen and (max-width: 32.9rem) {
+    padding: 2rem 2rem 0 2rem;
+  }
 `;
 
 export const TextBox = styled.div`

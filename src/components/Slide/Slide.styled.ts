@@ -14,15 +14,32 @@ export const SlideContainer = styled.div`
     max-width: 80rem;
     padding-bottom: 5rem;
   }
+
+  @media screen and (max-width: 44.37rem) {
+    gap: 0rem;
+  }
+
+  @media screen and (max-width: 32.9rem) {
+    padding: 0rem 2rem 3rem 2rem;
+  }
 `;
 
 export const AuthorBox = styled.div`
   display: flex;
   position: relative;
+
+  @media screen and (max-width: 44.37rem) {
+    flex-direction: column;
+  }
 `;
 
 export const PaintingImg = styled.img`
   width: 47.5rem;
+
+  @media screen and (max-width: 44.37rem) {
+    width: auto;
+    height: 44rem;
+  }
 `;
 
 export const ViewImgBtn = styled.button`
@@ -50,6 +67,10 @@ export const ViewImgBtn = styled.button`
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
   }
+
+  @media screen and (max-width: 44.37rem) {
+    bottom: 90%;
+  }
 `;
 
 export const BtnIcon = styled.img``;
@@ -72,6 +93,20 @@ export const NamesBox = styled.div`
   height: auto;
   margin-left: -6.5rem;
   margin-top: -1rem;
+
+  @media screen and (max-width: 51.9rem) {
+    margin-left: -10rem;
+  }
+
+  @media screen and (max-width: 48.12rem) {
+    margin-left: -16rem;
+  }
+
+  @media screen and (max-width: 44.37rem) {
+    margin-left: -6rem;
+    margin-top: -10rem;
+    width: 90%;
+  }
 `;
 
 export const PaintingName = styled.h1`
@@ -81,6 +116,12 @@ export const PaintingName = styled.h1`
   line-height: 6.4rem;
   max-width: 30rem;
   margin-bottom: 2.4rem;
+
+  @media screen and (max-width: 44.37rem) {
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 `;
 
 export const AuthorName = styled.p`
@@ -92,6 +133,12 @@ export const AuthorPortrait = styled.img`
   width: 12.8rem;
   margin-left: 3rem;
   margin-bottom: -6rem;
+
+  @media screen and (max-width: 44.37rem) {
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    margin-top: -2rem;
+  }
 `;
 
 export const TextBoxInfo = styled.div`
@@ -103,6 +150,14 @@ export const TextBoxInfo = styled.div`
     align-self: flex-start;
     margin-top: 4rem;
   }
+
+  @media screen and (max-width: 44.37rem) {
+    align-items: flex-end;
+    margin-top: 0;
+    align-self: center;
+
+    margin-top: -5rem;
+  }
 `;
 
 export const BigDate = styled.span`
@@ -110,6 +165,10 @@ export const BigDate = styled.span`
   font-weight: 700;
   line-height: 15rem;
   color: #f3f3f3;
+
+  @media screen and (max-width: 44.37rem) {
+    font-size: 10rem;
+  }
 `;
 
 export const TextInfo = styled.p`
@@ -123,6 +182,11 @@ export const TextInfo = styled.p`
     width: 45.7rem;
     margin-top: -7rem;
     margin-left: 12rem;
+  }
+
+  @media screen and (max-width: 44.37rem) {
+    margin-left: 0;
+    margin-top: -5rem;
   }
 `;
 
@@ -143,5 +207,9 @@ export const GoToSource = styled.a`
   @media screen and (max-width: 82rem) {
     margin-left: 12rem;
     margin-top: 7rem;
+  }
+
+  @media screen and (max-width: 32.9rem) {
+    margin-top: 4rem;
   }
 `;

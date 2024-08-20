@@ -34,6 +34,31 @@ function App() {
     (painting) => painting.id === currentActivePaintingId
   );
 
+  const checkNumber = (newIndex: number) => {
+    if (newIndex > mockPaintingsData.length - 1) {
+      return 1;
+    }
+    if (newIndex < 0) {
+      return mockPaintingsData.length - 1;
+    }
+
+    return newIndex;
+  };
+
+  const nextSlide = () => {
+    setCurrentActivePaintingId((currentIndex) => {
+      const newIndex = currentIndex! + 1;
+      return checkNumber(newIndex);
+    });
+  };
+
+  const prevSlide = () => {
+    setCurrentActivePaintingId((currentIndex) => {
+      const newIndex = currentIndex! - 1;
+      return checkNumber(newIndex);
+    });
+  };
+
   return (
     <Wrapper>
       <NavBar setCurrentActivePaintingId={setCurrentActivePaintingId} />
@@ -42,7 +67,13 @@ function App() {
           setCurrentActivePaintingId={setCurrentActivePaintingId}
         />
       )}
-      {activePainting && <Slider activePainting={activePainting} />}
+      {activePainting && (
+        <Slider
+          activePainting={activePainting}
+          nextSlide={nextSlide}
+          prevSlide={prevSlide}
+        />
+      )}
     </Wrapper>
   );
 }

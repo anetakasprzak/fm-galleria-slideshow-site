@@ -60,5 +60,21 @@ export const ButtonsBox = styled.div`
   gap: 3rem;
 `;
 
-export const IconBack = styled.img``;
-export const IconNext = styled.img``;
+export const IconBack = styled.img`
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    filter: invert(97%) sepia(1%) saturate(0%) hue-rotate(147deg)
+      brightness(93%) contrast(86%);
+  }
+`;
+
+export const IconNext = styled.img`
+  cursor: pointer;
+
+  &:hover {
+    filter: invert(97%) sepia(1%) saturate(0%) hue-rotate(147deg)
+      brightness(93%) contrast(86%);
+  }
+`;

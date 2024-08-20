@@ -22,6 +22,10 @@ export const SlideContainer = styled.div`
   @media screen and (max-width: 32.9rem) {
     padding: 0rem 2rem 3rem 2rem;
   }
+
+  @media screen and (max-width: 26.3rem) {
+    padding: 0rem 0.5rem 3rem 0.5rem;
+  }
 `;
 
 export const AuthorBox = styled.div`
@@ -39,6 +43,10 @@ export const PaintingImg = styled.img`
   @media screen and (max-width: 44.37rem) {
     width: auto;
     height: 44rem;
+  }
+
+  @media screen and (max-width: 32rem) {
+    height: 40rem;
   }
 `;
 
@@ -106,6 +114,7 @@ export const NamesBox = styled.div`
     margin-left: -6rem;
     margin-top: -10rem;
     width: 90%;
+    padding: 2rem 0 6rem 6.5rem;
   }
 `;
 
@@ -139,6 +148,10 @@ export const AuthorPortrait = styled.img`
     margin-left: 0rem;
     margin-top: -2rem;
   }
+
+  @media screen and (max-width: 32rem) {
+    margin-top: -4rem;
+  }
 `;
 
 export const TextBoxInfo = styled.div`
@@ -169,6 +182,10 @@ export const BigDate = styled.span`
   @media screen and (max-width: 44.37rem) {
     font-size: 10rem;
   }
+
+  @media screen and (max-width: 25.4rem) {
+    font-size: 8rem;
+  }
 `;
 
 export const TextInfo = styled.p`
@@ -187,6 +204,18 @@ export const TextInfo = styled.p`
   @media screen and (max-width: 44.37rem) {
     margin-left: 0;
     margin-top: -5rem;
+  }
+
+  @media screen and (max-width: 32.9rem) {
+    width: 40rem;
+  }
+
+  @media screen and (max-width: 25.4rem) {
+    width: 36rem;
+  }
+
+  @media screen and (max-width: 23.37rem) {
+    width: 32rem;
   }
 `;
 

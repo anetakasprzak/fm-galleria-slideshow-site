@@ -12,6 +12,10 @@ export const NavContainer = styled.div`
   @media screen and (max-width: 32.9rem) {
     margin: 0 2rem 1rem 2rem;
   }
+
+  @media screen and (max-width: 26.3rem) {
+    padding-bottom: 1.5rem;
+  }
 `;
 
 export const LogoImg = styled.img`

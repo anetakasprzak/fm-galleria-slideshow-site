@@ -203,7 +203,7 @@ export const TextInfo = styled.p`
 
   @media screen and (max-width: 44.37rem) {
     margin-left: 0;
-    margin-top: -5rem;
+    margin-top: -6.5rem;
   }
 
   @media screen and (max-width: 32.9rem) {
@@ -215,7 +215,7 @@ export const TextInfo = styled.p`
   }
 
   @media screen and (max-width: 23.37rem) {
-    width: 32rem;
+    width: 32.5rem;
   }
 `;
 

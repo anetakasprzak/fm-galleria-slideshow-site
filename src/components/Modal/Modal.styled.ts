@@ -17,6 +17,9 @@ export const Overlay = styled.div`
     height: auto;
     max-width: 100%;
     max-height: 80vh;
+
+    @media screen and (max-width: 65rem) {
+    }
   }
 `;
 

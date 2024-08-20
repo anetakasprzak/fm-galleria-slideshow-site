@@ -1,4 +1,4 @@
-import { NavContainer, SlideshowBtn, LogoImg } from "./NavBar.styled";
+import { NavContainer, LogoImg } from "./NavBar.styled";
 import { Painting } from "../../App";
 
 interface NavBarProps {
@@ -8,16 +8,13 @@ interface NavBarProps {
   >;
 }
 
-function NavBar({ activePainting, setCurrentActivePaintingId }: NavBarProps) {
+function NavBar({ setCurrentActivePaintingId }: NavBarProps) {
   return (
     <NavContainer>
       <LogoImg
         src="/public/logo.svg"
         onClick={() => setCurrentActivePaintingId(null)}
       />
-      <SlideshowBtn>
-        {!activePainting ? "Start slideshow" : "Stop slideshow"}
-      </SlideshowBtn>
     </NavContainer>
   );
 }

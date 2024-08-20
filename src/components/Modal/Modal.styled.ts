@@ -7,20 +7,8 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
   backdrop-filter: blur(3px);
-  z-index: 5;
-
-  & img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 80vh;
-
-    @media screen and (max-width: 65rem) {
-    }
-  }
+  z-index: 9;
 `;
 
 export const CloseBtn = styled.button`
@@ -43,13 +31,27 @@ export const CloseBtn = styled.button`
 
 export const ModalContent = styled.div`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 3rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    @media screen and (max-width: 82rem) {
+      width: 50rem;
+    }
+
+    @media screen and (max-width: 38.5rem) {
+      width: 40rem;
+    }
+  }
 `;

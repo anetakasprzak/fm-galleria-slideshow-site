@@ -5,7 +5,15 @@ export const SlideContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 12rem;
-  /* border-bottom: 1px solid #e5e5e5; */
+
+  @media screen and (max-width: 82rem) {
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 5rem;
+
+    max-width: 80rem;
+    padding-bottom: 5rem;
+  }
 `;
 
 export const AuthorBox = styled.div`
@@ -52,6 +60,10 @@ export const PaintingAuthorName = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 82rem) {
+    justify-content: flex-start;
+  }
 `;
 
 export const NamesBox = styled.div`
@@ -84,10 +96,13 @@ export const AuthorPortrait = styled.img`
 
 export const TextBoxInfo = styled.div`
   display: flex;
-
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 82rem) {
+    align-self: flex-start;
+    margin-top: 4rem;
+  }
 `;
 
 export const BigDate = styled.span`
@@ -102,9 +117,13 @@ export const TextInfo = styled.p`
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.8rem;
+  margin-top: -13.5rem;
 
-  position: absolute;
-  top: 11.5rem;
+  @media screen and (max-width: 82rem) {
+    width: 45.7rem;
+    margin-top: -7rem;
+    margin-left: 12rem;
+  }
 `;
 
 export const GoToSource = styled.a`
@@ -119,5 +138,10 @@ export const GoToSource = styled.a`
 
   &:hover {
     color: #000;
+  }
+
+  @media screen and (max-width: 82rem) {
+    margin-left: 12rem;
+    margin-top: 7rem;
   }
 `;

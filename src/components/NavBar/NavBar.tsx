@@ -1,8 +1,6 @@
 import { NavContainer, LogoImg } from "./NavBar.styled";
-import { Painting } from "../../App";
 
 interface NavBarProps {
-  activePainting?: Painting;
   setCurrentActivePaintingId: React.Dispatch<
     React.SetStateAction<number | null>
   >;

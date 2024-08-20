@@ -46,7 +46,9 @@ function Slide({ activePainting }: SlideProps) {
         <TextBoxInfo>
           <BigDate>{activePainting.year}</BigDate>
           <TextInfo>{activePainting.description}</TextInfo>
-          <GoToSource>Go to source</GoToSource>
+          <GoToSource href={activePainting.source} target="_blank">
+            Go to source
+          </GoToSource>
         </TextBoxInfo>
       </SlideContainer>
       {isOpen && (

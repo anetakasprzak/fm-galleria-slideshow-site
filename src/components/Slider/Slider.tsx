@@ -18,9 +18,15 @@ interface SliderProps {
   activePainting: Painting;
   nextSlide: () => void;
   prevSlide: () => void;
+  currentProgressPercentage: number;
 }
 
-function Slider({ activePainting, nextSlide, prevSlide }: SliderProps) {
+function Slider({
+  activePainting,
+  nextSlide,
+  prevSlide,
+  currentProgressPercentage,
+}: SliderProps) {
   return (
     <Container>
       <Slide activePainting={activePainting} />
@@ -28,6 +34,7 @@ function Slider({ activePainting, nextSlide, prevSlide }: SliderProps) {
         activePainting={activePainting}
         nextSlide={nextSlide}
         prevSlide={prevSlide}
+        currentProgressPercentage={currentProgressPercentage}
       />
     </Container>
   );
@@ -37,12 +44,14 @@ interface SliderComponentProps {
   activePainting: Painting;
   nextSlide: () => void;
   prevSlide: () => void;
+  currentProgressPercentage: number;
 }
 
 function SliderComponent({
   activePainting,
   nextSlide,
   prevSlide,
+  currentProgressPercentage,
 }: SliderComponentProps) {
   const handlePrev = () => {
     prevSlide();
@@ -65,7 +74,7 @@ function SliderComponent({
   return (
     <SliderWrapper>
       <ProgressBarContainer>
-        <Bar />
+        <Bar currentProgressPercentage={currentProgressPercentage} />
       </ProgressBarContainer>
       <Details>
         <TextBox>

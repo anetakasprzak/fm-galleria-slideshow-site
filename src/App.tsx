@@ -36,7 +36,7 @@ function App() {
 
   const checkNumber = (newIndex: number) => {
     if (newIndex > mockPaintingsData.length - 1) {
-      return 1;
+      return 0;
     }
     if (newIndex < 0) {
       return mockPaintingsData.length - 1;
@@ -59,6 +59,10 @@ function App() {
     });
   };
 
+  const currentProgressPercentage = Math.floor(
+    (currentActivePaintingId! / (mockPaintingsData.length - 1)) * 100
+  );
+
   return (
     <Wrapper>
       <NavBar setCurrentActivePaintingId={setCurrentActivePaintingId} />
@@ -72,6 +76,7 @@ function App() {
           activePainting={activePainting}
           nextSlide={nextSlide}
           prevSlide={prevSlide}
+          currentProgressPercentage={currentProgressPercentage}
         />
       )}
     </Wrapper>

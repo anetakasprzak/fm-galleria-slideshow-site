@@ -10,10 +10,10 @@ export const ProgressBarContainer = styled.div`
   position: relative;
 `;
 
-export const Bar = styled.div`
+export const Bar = styled.div<{ currentProgressPercentage: number }>`
   background-color: #000;
   height: 1px;
-  width: 50%;
+  width: ${(props) => `${props.currentProgressPercentage}%`};
   z-index: 8;
   position: absolute;
   top: 0;

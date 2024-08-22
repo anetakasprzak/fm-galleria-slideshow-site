@@ -10,7 +10,7 @@ function NavBar({ setCurrentActivePaintingId }: NavBarProps) {
   return (
     <NavContainer>
       <LogoImg
-        src="/public/logo.svg"
+        src="/logo.svg"
         onClick={() => setCurrentActivePaintingId(null)}
       />
     </NavContainer>

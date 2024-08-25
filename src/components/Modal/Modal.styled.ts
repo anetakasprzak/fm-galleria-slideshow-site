@@ -53,5 +53,13 @@ export const ModalContent = styled.div`
     @media screen and (max-width: 38.5rem) {
       width: 40rem;
     }
+
+    @media screen and (max-width: 26.3rem) {
+      width: 35rem;
+    }
+
+    @media screen and (max-width: 23.37rem) {
+      width: 32rem;
+    }
   }
 `;
